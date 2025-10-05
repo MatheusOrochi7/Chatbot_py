@@ -1,0 +1,26 @@
+/* Define a animação do gradiente */
+@keyframes gradientAnimation {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+[data-testid="stAppViewContainer"] {
+    background-image: linear-gradient(to right, #8A2BE2, #FFA500);
+    background-attachment: fixed;
+    /* Aumenta o tamanho do fundo para que a animação seja visível */
+    background-size: 200% 200%; 
+    /* Aplica a animação */
+    animation: gradientAnimation 15s ease infinite;
+}
+.stChatMessage {
+    background-color: rgba(255, 255, 255, 0.15);
+    border-radius: 10px;
+}
+
